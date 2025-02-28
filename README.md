@@ -103,3 +103,8 @@ Ubuntu Server doesn't come with a GUI by default, so you'll need to install one:
 sudo apt update
 sudo apt upgrade -y
 sudo apt install ubuntu-desktop -y
+
+
+
+
+sudo apt-get install net-tools
