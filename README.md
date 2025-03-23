@@ -42,8 +42,8 @@ Create a non-root user with sudo privileges:
 > Originally, sudo stood for "superuser do," as it was initially designed to allow users to run commands with superuser (root) privileges. This remains its most common interpretation and usage in everyday discussions. <br><br>However, the official Sudo project has moved away from this definition. According to the project's website, sudo now means "su 'do'" which suggests a tool that delivers su-like capabilities.
 
 ```bash
-sudo adduser yourusername
-sudo usermod -aG sudo yourusername
+sudo adduser your__user__name
+sudo usermod -aG sudo your__user__name
 ```
 
 > The -aG option combines two separate flags that work together to add a user to a supplementary group without removing them from any existing groups.
