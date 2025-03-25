@@ -28,8 +28,7 @@ pw: your-server-password
 First, update your system to ensure you have the latest security patches:
 
 ```bash
-sudo apt update
-sudo apt upgrade -y
+sudo apt update && sudo apt upgrade -y
 ```
 
 > Note: The `-y` flag is used to automatically answer yes to all prompts.
