@@ -1,5 +1,22 @@
 # Linux Server Setup & Configuration
 
+Here are all the steps I use to set up a Linux server. I use Ubuntu Server 22.04 LTS, but these steps should work for any Linux server.
+
+>**Note:** This guide is intended for educational purposes only. Use at your own risk. I am not responsible for any damage or loss of data that may occur as a result of following this guide.
+
+## Linux Server Setup & Configuration
+  - [Step #1: Get a Server](Steps/Where-To-Get-a-Server.md)
+
+  - [Step #2: Obtain Vital Information](#step-2-obtain-vital-information)
+
+  - [Step #3: Download & Install Putty](#step-3-download--install-putty)
+  - [Step #4: Login to Server](#step-4-login-to-server)
+  - [Step #5: Update System Packages](#step-5-update-system-packages)
+  - [Step #6: Create a New User](#step-6-create-a-new-user)
+  - [Step #7: Verify New User](#step-7-verify-new-user)
+  - [Step #8: Configure SSH Security](#step-8-configure-ssh-security)
+  - [Installing a Desktop Environment](#installing-a-desktop-environment)
+
 ## Step #1: Get a Server 
 
 Get your server from a hosting provider. I personally use and recommend [Hostinger](https://hostinger.com?REFERRALCODE=5Q1DARRENHDY). 
@@ -83,13 +100,6 @@ sudo nano /etc/ssh/sshd_config
 - Change default SSH port (optional): Port 2222 (choose a port between 1024-65535)
 - Allow only your new user: AllowUsers yourusername
 
-
-
-
-
-
-
-
 - Disable password authentication (after setting up SSH keys)   
     - PasswordAuthentication no
 
@@ -97,17 +107,11 @@ sudo nano /etc/ssh/sshd_config
 
 Set up SSH key authentication (on your local machine):
 
-
-
-
 Installing a Desktop Environment
 Ubuntu Server doesn't come with a GUI by default, so you'll need to install one:
 
 sudo apt update
 sudo apt upgrade -y
 sudo apt install ubuntu-desktop -y
-
-
-
 
 sudo apt-get install net-tools
