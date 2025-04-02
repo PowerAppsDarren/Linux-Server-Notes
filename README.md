@@ -4,9 +4,13 @@
 
 Get your server from a hosting provider. I personally use and recommend [Hostinger](https://hostinger.com?REFERRALCODE=5Q1DARRENHDY). 
 
-## Step #2: Obtain Server Credentials
+## Step #2: Obtain Vital Information
 
-You will need the root password to login to your server.
+Once you have your server, you will need to obtain the following information:
+
+- **Root Password**: You will need the root password to login to your server. Chances are, you were prompted to create one. You should have received this in an email from your hosting provider. If you didn't, check your hosting provider's documentation on how to obtain it.
+
+- **Server IP Address**: This is the public IP address of your server. You will use this to connect to your server.
 
 ## Step #3: Download & Install Putty
 
