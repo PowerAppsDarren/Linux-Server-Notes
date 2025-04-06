@@ -32,6 +32,10 @@ sudo apt install -y unattended-upgrades && \
 sudo dpkg-reconfigure -plow unattended-upgrades
 ```
 
+```bash
+sudo cat /etc/apt/apt.conf.d/20auto-upgrades
+```
+
 
 
 
