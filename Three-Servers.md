@@ -1,7 +1,7 @@
 # 🟢 Ubuntu 22.04 LTS Server Setup
 
 
-## Phase 1 Task Flow 
+## Overview of Plan (table of contents)
 
 - 1️⃣ Verify OS 
 - 2️⃣ Update OS 
@@ -24,11 +24,17 @@ uname -r
 uptime -s
 ```
 ## 2️⃣ Update OS 
+
   - Make sure your system has the latest packages, kernel, and security patches
 
 ```bash
-
+sudo apt install -y unattended-upgrades && \
+sudo dpkg-reconfigure -plow unattended-upgrades
 ```
+
+
+
+
 
 ## 3️⃣ Install Docker 
   - Install Docker Engine and CLI
