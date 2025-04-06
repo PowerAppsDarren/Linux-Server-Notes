@@ -8,7 +8,7 @@ doc.add_heading('SuperPower Labs Server Infrastructure Plan', 0)
 # Summary section
 doc.add_heading('Project Summary', level=1)
 doc.add_paragraph(
-    "This document outlines the infrastructure and planning for SuperPower Labs’ self-hosted server network. "
+    "This document outlines the infrastructure and planning for SuperPower Labs' self-hosted server network. "
     "The system spans Hostinger cloud services and a home network, featuring Dockerized applications, native installs, "
     "automated backups, monitoring, and secure connectivity via Tailscale."
 )
@@ -46,7 +46,7 @@ phases = [
     "Phase 7: Scalability - Portable Docker, `.env` secrets, optional Docker Swarm"
 ]
 for item in phases:
-    doc.add_paragraph(f"- {item}", style='List Bullet')
+    doc.add_paragraph(item, style='List Bullet')  # Removed the "- " prefix
 
 # Risk Planning
 doc.add_heading('Risk Areas & Planning', level=1)
@@ -59,10 +59,10 @@ risks = [
     "Resource contention (BBB and LLMs need isolation)"
 ]
 for risk in risks:
-    doc.add_paragraph(f"- {risk}", style='List Bullet')
+    doc.add_paragraph(risk, style='List Bullet')  # Removed the "- " prefix
 
-# Save the document
-output_path = "/mnt/data/SuperPowerLabs_ServerPlan.docx"
+# Save the document with a Windows-compatible path
+output_path = r"C:\+CLOUD\OneDrive - Super Power Labs\DOCUMENTS\GitHub\Linux-Server-Notes\SuperPowerLabs_ServerPlan.docx"
 doc.save(output_path)
 
-output_path
+print(f"Document saved to: {output_path}")
