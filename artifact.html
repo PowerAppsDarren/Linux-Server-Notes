@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RAG Workflow Overview</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f9;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    svg {
+      width: 100%;
+      height: auto;
+      height: 100%;
+      max-height: 800px;
+      border: 1px solid #ccc;
+      background-color: white;
+      display: block;
+      margin: 20px auto;
+    }
+    .box {
+      fill: #e3f2fd;
+      stroke: #2196f3;
+      stroke-width: 2;
+      rx: 10;
+      ry: 10;
+    }
+    .label {
+      font-size: 14px;
+      fill: #0d47a1;
+      text-anchor: middle;
+      dominant-baseline: central;
+    }
+    line {
+      stroke: #555;
+      stroke-width: 2;
+      marker-end: url(#arrowhead);
+    }
+  </style>
+</head>
+<body>
+  <h1>Retrieval-Augmented Generation (RAG) Workflow</h1>
+  <svg id="workflow-diagram">
+    <!-- Arrowhead definition -->
+    <defs>
+      <marker id="arrowhead" markerWidth="10" markerHeight="7"
+              refX="10" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#555" />
+      </marker>
+    </defs>
+
+    <!-- Nodes -->
+    <!-- Document Ingestion -->
+    <rect x="50" y="50" width="200" height="60" class="box"/>
+    <text x="150" y="80" class="label">Document Ingestion</text>
+
+    <!-- Vector Store -->
+    <rect x="50" y="140" width="200" height="60" class="box"/>
+    <text x="150" y="170" class="label">Vector Store</text>
+
+    <!-- User Question -->
+    <rect x="350" y="50" width="200" height="60" class="box"/>
+    <text x="450" y="80" class="label">User Question</text>
+
+    <!-- Retriever -->
+    <rect x="350" y="140" width="200" height="60" class="box"/>
+    <text x="450" y="170" class="label">Retriever</text>
+
+    <!-- Retrieved Context -->
+    <rect x="350" y="230" width="200" height="60" class="box"/>
+    <text x="450" y="260" class="label">Retrieved Context</text>
+
+    <!-- Generator -->
+    <rect x="650" y="140" width="200" height="60" class="box"/>
+    <text x="750" y="170" class="label">Generator</text>
+
+    <!-- Final Answer -->
+    <rect x="650" y="230" width="200" height="60" class="box"/>
+    <text x="750" y="260" class="label">Final Answer</text>
+
+    <!-- Arrows -->
+    <line x1="250" y1="80" x2="350" y2="80" />
+    <line x1="150" y1="110" x2="150" y2="140" />
+    <line x1="150" y1="200" x2="150" y2="230" />
+    <line x1="250" y1="170" x2="350" y2="170" />
+    <line x1="250" y1="260" x2="350" y2="260" />
+    <line x1="550" y1="170" x2="650" y2="170" />
+    <line x1="550" y1="260" x2="650" y2="260" />
+
+  </svg>
+</body>
+</html>
