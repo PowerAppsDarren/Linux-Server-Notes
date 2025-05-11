@@ -1,6 +1,5 @@
 # Docker
 
-
 https://youtu.be/DQdB7wFEygo?si=u6nAFw2ggFfbTX_Y
 
 ## What is Docker? 

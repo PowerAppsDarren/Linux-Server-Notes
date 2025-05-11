@@ -60,13 +60,19 @@ id -nG USER_NAME
 sudo whoami
 
 # =============================================================================
-# Set up SSH key-based authentication
+# Set up SSH key-based authentication // If you haven't already done so!
 # =============================================================================
 ssh-keygen -t rsa -b 4096 -C "USER_EMAIL"
 
+# =============================================================================
 # This will prompt you to enter a file in which to save the key. Press Enter 
 # to accept the default location. You can also set a passphrase for added 
 # security, or leave it empty for no passphrase.
+# =============================================================================
+# You may want to use git bash for this step if you are on Windows.
+# If you are on Linux, you can use the terminal.
+# It doesn't seem to work with PowerShell.
+# =============================================================================
 ssh-copy-id USER_NAME@SERVER_IP_ADDRESS
 # Or manually:
 # cat ~/.ssh/id_rsa.pub | ssh USER_NAME@SERVER_IP_ADDRESS "mkdir -p ~/.ssh && chmod 700 ~/.ssh && touch ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys && cat >> ~/.ssh/authorized_keys"
@@ -171,7 +177,7 @@ sudo dpkg-reconfigure -plow unattended-upgrades
 # Review config: sudo nano /etc/apt/apt.conf.d/50unattended-upgrades
 #
 # Set Timezone:
-sudo timedatectl set-timezone YOUR_TIMEZONE
+sudo timedatectl set-timezone America/New_York  #YOUR_TIMEZONE
 # List timezones: timedatectl list-timezones
 #
 # Install Basic Monitoring Tools (Optional): Tools like htop, iotop, iftop can be useful.
@@ -205,8 +211,6 @@ sudo systemctl reload caddy
 # =============================================================================
 How do I get a list of all installed packages on my system?
 How can I verify the installation and configuration of these packages?
-
-
 # =============================================================================
 # 7️⃣ 
 # =============================================================================
@@ -218,3 +222,176 @@ Here’s a step-by-step guide to install essential monitoring & diagnostic tools
 ```bash
 sudo apt update && sudo apt install iftop  
 ```
+# =============================================================================
+# =============================================================================
+ncdu
+(Disk Usage Analyzer)
+Purpose : Analyze disk usage interactively.
+sudo apt install ncdu  
+# =============================================================================
+# =============================================================================
+nmon
+System Performance Monitor)
+Purpose : Monitor CPU, memory, disk I/O, and network activity.
+sudo apt install nmon  
+# =============================================================================
+# =============================================================================
+sudo apt install nmap  
+# =============================================================================
+# =============================================================================
+sudo apt install screen  
+# =============================================================================
+# =============================================================================
+sudo apt install bash-completion  
+# =============================================================================
+# =============================================================================
+sudo apt install htop  
+# =============================================================================
+# =============================================================================
+Summary of Tools & Use Cases
+iftop
+Real-time network bandwidth monitoring
+ncdu
+Disk usage analysis
+nmon
+System performance metrics
+nmap
+Network scanning and port discovery
+screen
+Terminal session management
+bash-completion
+CLI efficiency improvement
+
+For advanced monitoring (e.g., server health checks), consider tools like Nagios 
+ or SolarWinds 
+, though these often require additional configuration. Always ensure dependencies and repositories (like EPEL for CentOS) are configured for seamless installation.
+# =============================================================================
+# =============================================================================
+BACKUPS
+# =============================================================================
+# =============================================================================
+sudo nano /usr/local/bin/backup.sh  
+# =============================================================================
+# =============================================================================
+
+# =============================================================================
+# =============================================================================
+
+# =============================================================================
+# =============================================================================
+
+# =============================================================================
+# =============================================================================
+
+# =============================================================================
+# =============================================================================
+
+# =============================================================================
+# =============================================================================
+
+# =============================================================================
+# =============================================================================
+
+# =============================================================================
+# =============================================================================
+
+# =============================================================================
+# =============================================================================
+
+# =============================================================================
+# =============================================================================
+
+Git Server - For hosting Git repositories
+Organizr
+Watchtower
+Jupyter 
+
+
+Grafana - For monitoring and visualization
+
+Elastic Stack (formerly ELK) - For log storing, searching, and visualization
+Heimdall - A dashboard to organize and access all your web applications
+
+Plex
+Crashplan*
+MakeMKV
+Handbrake
+Dokuwiki
+Portainer
+RStudio
+Jupyter
+Unifi Controller
+
+Traefik
+Organizr
+NginxProxyManager
+Plex
+NZBGet or SABnzbd
+Sonarr
+Radarr
+Komga
+Transmission
+jDownloader
+wg-easy (Wireguard server)
+Vaultwarden
+
+Plex - Media server
+iSpy - IPCam/audio stream/CC-TV manager
+Photoprism - Photo library management (Google Photos replacement)
+PiHole - A sort of DNS level firewall
+BabyBuddy - Childcare metric tracker (feedings,diapers,naps,weight,etc)
+Heimdall - A simple hub/gui for all the server apps.
+
+
+
+- Huly
+- Formbricks
+- N8N
+- Shields.io 
+- Nocodb
+- Strapi
+- FlowiseAI
+- Scira
+- LimeSurvey
+- https://wsrv.nl/ - https://github.com/weserv/images
+- fastapi
+- hugging-face-transformer
+- FreeAPI
+- php-bb
+- Directus
+
+
+paperless Paperless Office
+Atlassian Confluence
+Atlassian Jira
+Atlassian Bitbucket
+
+
+On A Laptop (why Laptop? It has a Battery included ;-) )
+Portainer-agent (to acces it from my other Portainer)
+Openhab3 (Smarthome)
+NodeRed
+Mosquitto(MQTT)
+Deconz (Zibgee Controller)
+Grafana
+
+
+I use on my NAS:
+piHole
+HomeAssistant
+deconz
+Portainer
+Flame
+Lenpaste
+Moquitto
+NodeRed
+unbound
+Uptime Kuma
+Grafana
+
+Nextcloud
+Nginx Reverse Proxy
+Watchtower (keeps your container up to date)
+Jellyfin
+Lidarr
+Syncthing
