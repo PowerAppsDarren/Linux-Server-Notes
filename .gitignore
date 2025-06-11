@@ -1,2 +1,20 @@
+# Personal scripts and configurations
 darren.sh
 *darren*
+
+# VS Code workspace-specific settings
+.vscode/settings.json
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Personal notes and drafts
+*personal*
+*private*
+*secret*

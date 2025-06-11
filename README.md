@@ -19,7 +19,7 @@ Here are all the steps I use to set up a Linux server. I use Ubuntu Server 22.04
 
 ## Step #1: Get a Server 
 
-Get your server from a hosting provider. I personally use and recommend [Hostinger](https://hostinger.com?REFERRALCODE=5Q1DARRENHDY). 
+Get your server from a hosting provider. I personally use and recommend [Hostinger](https://hostinger.com). 
 
 ## Step #2: Obtain Vital Information
 
