@@ -87,7 +87,7 @@ sudo whoami
 ```
 
 ## Step #8: Configure SSH Security
-
+  
 Edit the SSH configuration file:
 
 ```
