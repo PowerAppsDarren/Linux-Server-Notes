@@ -1,0 +1,127 @@
+{
+    "[markdown]": {
+        "editor.fontFamily": "Consolas, 'Courier New', monospace"
+    },
+    "gitdoc.enabled": true,
+    // Theme settings
+    "workbench.colorTheme": "Default Light+",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorCustomizations": {
+        "editor.background": "#ffffff",
+        "sideBar.background": "#fbf9ef",
+        "activityBar.background": "#2A2A2A", // Darker color for better contrast
+        "activityBar.foreground": "#ffffff", 
+        "titleBar.activeBackground": "#005289", // Much darker blue for menu bar, but not black
+        "titleBar.activeForeground": "#ffffff", // White text for contrast on dark blue
+        "statusBar.background": "#005289", // Keep matching blue for status bar
+        "statusBar.foreground": "#ffffff", // White text for status bar
+        
+        // Terminal colors - darker theme
+        "terminal.background": "#002944", // 50% darker than #005289
+        "terminal.foreground": "#e5e5e5", // Light gray text for good contrast
+        "terminalCursor.background": "#ffffff",
+        "terminalCursor.foreground": "#ffffff",
+        "terminal.ansiBlack": "#000000",
+        "terminal.ansiRed": "#cd3131",
+        "terminal.ansiGreen": "#0dbc79",
+        "terminal.ansiYellow": "#e5e510",
+        "terminal.ansiBlue": "#2472c8",
+        "terminal.ansiMagenta": "#bc3fbc",
+        "terminal.ansiCyan": "#11a8cd",
+        "terminal.ansiWhite": "#e5e5e5",
+        "terminal.ansiBrightBlack": "#666666",
+        "terminal.ansiBrightRed": "#f14c4c",
+        "terminal.ansiBrightGreen": "#23d18b",
+        "terminal.ansiBrightYellow": "#f5f543",
+        "terminal.ansiBrightBlue": "#3b8eea",
+        "terminal.ansiBrightMagenta": "#d670d6",
+        "terminal.ansiBrightCyan": "#29b8db",
+        "terminal.ansiBrightWhite": "#e5e5e5",
+        "terminal.selectionBackground": "#264f78",
+        "terminalCommandDecoration.defaultBackground": "#ffffff15",
+        "terminalCommandDecoration.successBackground": "#1b81a8",
+        "terminalCommandDecoration.errorBackground": "#f14c4c"
+    },
+        
+    // Editor settings
+    "editor.fontSize": 14,
+    "editor.fontFamily": "Consolas, 'Courier New', monospace, 'Fira Code'",
+    "editor.fontLigatures": true,
+    "editor.lineHeight": 20,
+    "editor.cursorStyle": "line",
+    "editor.cursorBlinking": "smooth",
+    "editor.renderWhitespace": "all",
+    
+    // Terminal settings
+    "terminal.integrated.fontWeight": "normal",
+    "terminal.integrated.fontWeightBold": "normal",
+    
+    // Window settings
+    "window.zoomLevel": 2,
+    "window.titleBarStyle": "custom",
+    "window.menuBarVisibility": "toggle",
+    
+    // Workbench settings
+    "workbench.tree.indent": 16,
+    "workbench.startupEditor": "none",
+    "workbench.editor.showTabs": "multiple",
+    "workbench.sideBar.location": "left",
+
+    // AI tools integration
+    "aiTools.chatDocumentation.enabled": true,
+    "aiTools.chatDocumentation.autoCreateFiles": true,
+    "aiTools.chatDocumentation.folderFormat": "yyyy-MM-dd-brief-description",
+    "aiTools.chatDocumentation.fileFormat": "NN-event-description",
+    "aiTools.timeUpdate.enabled": true,
+    "aiTools.timeUpdate.updateFrequencyMinutes": 30,
+    "aiTools.timeUpdate.runOnAIEngagement": true,
+    
+    // Events that trigger time update
+    "aiTools.triggers": [
+        "onStartupFinished",
+        "onChatPanelOpen",
+        "onCopilotRequest"
+    ],
+    // AI Time Updater configuration
+    "tasks.runOn": {
+        "folderOpen": [
+            "Update Current Time"
+        ]
+    },
+    
+    // GitHub Copilot settings - ADDED TO FIX INSTRUCTIONS ISSUE
+    "github.copilot.enable": {
+        "*": true
+    },
+    "github.copilot.chat.localeOverride": "en",
+    "github.copilot.chat.codeGeneration.instructions": [
+        {
+            "text": "Always follow these copilot instructions when we chat and generate code. There are instructions in there about documenting all of our chats together and creating a folder in 'ai-chats'. Please follow those instructions! You need to get the current date and time first so you know what to name the folder!",
+        },
+        {
+            "file": ".github/copilot-instructions.md"
+        }
+    ],
+    "github.copilot.editor.enableCodeActions": true,
+    "github.copilot.editor.enableCodeCompletions": true,
+    "github.copilot.editor.enableInlineSuggestions": true,
+    "github.copilot.editor.enableChatCompletions": true,
+    "github.copilot.editor.enableChatCompletionsInEditor": true,
+    "github.copilot.editor.enableChatCompletionsInChat": true,
+    "github.copilot.editor.enableChatCompletionsInChatPanel": true,
+    "github.copilot.editor.enableChatCompletionsInChatPanelInline": true,
+    "github.copilot.advanced.useInstructionFiles": true,
+    
+    // Critical: Point to the instructions file
+    "github.copilot.advanced": {
+        "instructionFilePath": "${workspaceFolder}/.github/copilot-instructions.md",
+        "indentationMode": {
+            "javascript": "tabs",
+            "typescript": "tabs"
+        }
+    },
+    
+    // Ensure the file is included in context for each session
+    "github.copilot.advanced.setFileContext": ".github/copilot-instructions.md",
+    "github.copilot.advanced.setAutoCompletionsTemplate": "I want you to follow the instructions in the .github/copilot-instructions.md file for this project. Always apply those guidelines when generating code."
+}
