@@ -1,5 +1,4 @@
 # Personal scripts and configurations
-darren.sh
 *darren*
 
 # VS Code workspace-specific settings
@@ -18,3 +17,23 @@ Thumbs.db
 *personal*
 *private*
 *secret*
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+!.env.template
+*.key
+*.pem
+*.p12
+*.pfx
+id_rsa*
+id_ecdsa*
+id_ed25519*
+
+# API keys and configuration files
+config.json
+secrets.json
+credentials.json
+*.credential
+*.token
