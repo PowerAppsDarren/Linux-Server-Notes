@@ -5,10 +5,9 @@ Here are all the steps I use to set up a Linux server. I use Ubuntu Server 22.04
 >**Note:** This guide is intended for educational purposes only. Use at your own risk. I am not responsible for any damage or loss of data that may occur as a result of following this guide.
 
 ## Linux Server Setup & Configuration
+
   - [Step #1: Get a Server](Steps/Where-To-Get-a-Server.md)
-
   - [Step #2: Obtain Vital Information](#step-2-obtain-vital-information)
-
   - [Step #3: Download & Install Putty](#step-3-download--install-putty)
   - [Step #4: Login to Server](#step-4-login-to-server)
   - [Step #5: Update System Packages](#step-5-update-system-packages)

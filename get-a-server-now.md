@@ -1,4 +1,4 @@
-
+# Get your own server out in the cloud!
 
 Get your server from a hosting provider. I have scoured the internet for the best deals and found that Hostinger offers some of the most affordable and reliable VPS hosting plans.👍👍
 
