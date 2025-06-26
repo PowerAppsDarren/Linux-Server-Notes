@@ -1,0 +1,36 @@
+services:
+  windows:
+    image: dockurr/windows
+    container_name: windows-11-container
+    environment:
+      #================================================
+      VERSION: "10"
+      #VERSION: "11"        # Windows 11
+      #VERSION: "10"        # Windows 10  
+      #VERSION: "8"         # Windows 8.1
+      #VERSION: "7"         # Windows 7
+      #VERSION: "xp"        # Windows XP
+      #VERSION: "2022"      # Windows Server 2022
+      #VERSION: "2019"      # Windows Server 2019
+      #================================================      
+      TIMEOUT: "30"         # Increase boot timeout
+      RAM_SIZE: "8G"        # Memory allocation (default: 4G)
+      CPU_CORES: "4"        # Number of CPU cores (default: 2)
+      DISK_SIZE: "64G"      # Virtual disk size (default: 64G)
+      #================================================      
+      USERNAME: "bauss"
+      PASSWORD: "bauss"
+    devices:
+      #- /dev/kvm           # won't work on Windows
+      - /dev/net/tun       # low performance
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - 8007:8006
+      - 3391:3389/tcp  # Change host port to 3391
+      - 3391:3389/udp  # Change host port to 3391
+    volumes:
+      - D:/DOCKER/windows-10-stack:/storage  # Use absolute path instead
+    restart: always
+    stop_grace_period: 2m
+    privileged: true  # Add this for better device access
