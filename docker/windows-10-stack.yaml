@@ -1,7 +1,7 @@
 services:
   windows:
     image: dockurr/windows
-    container_name: windows-11-container
+    container_name: windows-10-container
     environment:
       #================================================
       VERSION: "10"
