@@ -13,6 +13,15 @@ Thumbs.db
 *.temp
 *.log
 
+# Environment files
+.env
+.env.local
+.env.development
+.env.staging
+.env.production
+.env.test
+*.env
+
 # Personal notes and drafts
 *personal*
 *private*
